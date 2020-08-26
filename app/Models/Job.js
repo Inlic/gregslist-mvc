@@ -1,6 +1,6 @@
 import { generateId } from "../utils.js";
 console.log(0)
-export default class Car {
+export default class Job {
   // Object Destructuring
   constructor({ position, salary, posted, company, img, description }) {
     console.log(2);
@@ -22,8 +22,7 @@ export default class Car {
               <h4 class="card-title">${this.company} - ${this.position} - ${this.salary}</h4>
               <p class="card-text">${this.description}</p>
               <div class="d-flex justify-content-between">
-                  <button class="btn btn-outline-danger" onclick="app.carsController.removeCar('${this.id}')">Delete</button>
-                  <button class="btn btn-outline-info" onclick="app.carsController.bid('${this.id}')">+ $100</button>
+                  <button class="btn btn-outline-danger" onclick="app.jobsController.removeCar('${this.id}')">Delete</button>
                   <p>Posted: ${this.posted}</p>
               </div>
           </div>

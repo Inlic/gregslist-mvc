@@ -1,34 +1,34 @@
-import carsService from "../Services/CarsService.js";
+import housesService from "../Services/HousesService.js";
 import STORE from "../store.js";
 console.log(3)
 // private
-function _drawCars() {
+function _drawHouses() {
   console.log(6)
-  let cars = STORE.State.cars
+  let houses = STORE.State.houses
   let template = ''
   // NOTE when you have a collection of items, they will need to be added to the template in a loop
-  cars.forEach(c => template += c.Template)
-  document.getElementById('cars').innerHTML = template
+  houses.forEach(h => template += h.Template)
+  document.getElementById('houses').innerHTML = template
 }
 
 
 //Public
-export default class CarsController {
+export default class HousesController {
   constructor() {
     console.log(5)
-    _drawCars();
+    _drawHouses();
   }
 
-  createCar() {
+  createHouse() {
     event.preventDefault();
     let form = event.target
-    let rawCar = {
+    let rawHouse = {
       // @ts-ignore
-      make: form.make.value,
+      beds: form.beds.value,
       // @ts-ignore
-      model: form.model.value,
+      baths: form.baths.value,
       // @ts-ignore
-      year: form.year.value,
+      yearbuilt: form.yearbuilt.value,
       // @ts-ignore
       price: parseInt(form.price.value),
       // @ts-ignore
@@ -37,19 +37,19 @@ export default class CarsController {
       img: form.img.value
     }
     debugger
-    carsService.createCar(rawCar)
-    _drawCars();
+    housesService.createHouse(rawHouse)
+    _drawHouses();
   }
 
-  removeCar(id) {
+  removeHouse(id) {
     debugger
     console.log('hornk', id)
-    carsService.removeCar(id);
-    _drawCars();
+    housesService.removeHouse(id);
+    _drawHouses();
   }
 
   bid(id) {
-    carsService.bid(id);
-    _drawCars();
+    housesService.bid(id);
+    _drawHouses();
   }
 }
