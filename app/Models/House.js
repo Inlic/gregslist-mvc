@@ -19,11 +19,11 @@ export default class House {
       <div class="card">
           <img class="card-img-top" src="${this.img}" alt="">
           <div class="card-body">
-              <h4 class="card-title">${this.beds} - ${this.baths} - ${this.yearbuilt}</h4>
+              <h4 class="card-title">${this.beds} Beds - ${this.baths} Baths - Built: ${this.yearbuilt}</h4>
               <p class="card-text">${this.description}</p>
               <div class="d-flex justify-content-between">
-                  <button class="btn btn-outline-danger" onclick="app.carsController.removeCar('${this.id}')">Delete</button>
-                  <button class="btn btn-outline-info" onclick="app.carsController.bid('${this.id}')">+ $100</button>
+                  <button class="btn btn-outline-danger" onclick="app.housesController.removeHouse('${this.id}')">Delete</button>
+                  <button class="btn btn-outline-info" onclick="app.housesController.bid('${this.id}')">+ $1000</button>
                   <p>$${this.price.toFixed(2)}</p>
               </div>
           </div>

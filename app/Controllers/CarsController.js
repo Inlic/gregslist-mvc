@@ -36,13 +36,11 @@ export default class CarsController {
       // @ts-ignore
       img: form.img.value
     }
-    debugger
     carsService.createCar(rawCar)
     _drawCars();
   }
 
   removeCar(id) {
-    debugger
     console.log('hornk', id)
     carsService.removeCar(id);
     _drawCars();

@@ -22,7 +22,7 @@ export default class Job {
               <h4 class="card-title">${this.company} - ${this.position} - ${this.salary}</h4>
               <p class="card-text">${this.description}</p>
               <div class="d-flex justify-content-between">
-                  <button class="btn btn-outline-danger" onclick="app.jobsController.removeCar('${this.id}')">Delete</button>
+                  <button class="btn btn-outline-danger" onclick="app.jobsController.removeJob('${this.id}')">Delete</button>
                   <p>Posted: ${this.posted}</p>
               </div>
           </div>
