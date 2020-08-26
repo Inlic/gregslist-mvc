@@ -30,11 +30,11 @@ export default class HousesController {
       // @ts-ignore
       yearbuilt: form.yearbuilt.value,
       // @ts-ignore
-      price: parseInt(form.price.value),
+      price: parseInt(form.houseprice.value),
       // @ts-ignore
-      description: form.description.value,
+      description: form.housedescription.value,
       // @ts-ignore
-      img: form.img.value
+      img: form.houseimg.value
     }
     debugger
     housesService.createHouse(rawHouse)
@@ -42,7 +42,6 @@ export default class HousesController {
   }
 
   removeHouse(id) {
-    debugger
     console.log('hornk', id)
     housesService.removeHouse(id);
     _drawHouses();

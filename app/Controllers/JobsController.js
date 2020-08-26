@@ -32,17 +32,15 @@ export default class JobsController {
       // @ts-ignore
       company: form.company.value,
       // @ts-ignore
-      description: form.description.value,
+      description: form.jobdescription.value,
       // @ts-ignore
-      img: form.img.value
+      img: form.jobimg.value
     }
-    debugger
     jobsService.createJob(rawJob)
     _drawJobs();
   }
 
   removeJob(id) {
-    debugger
     console.log('hornk', id)
     jobsService.removeJob(id);
     _drawJobs();

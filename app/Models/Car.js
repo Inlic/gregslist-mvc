@@ -30,4 +30,5 @@ export default class Car {
       </div>
     </div>`
   }
+  
 }

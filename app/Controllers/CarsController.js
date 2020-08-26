@@ -30,11 +30,11 @@ export default class CarsController {
       // @ts-ignore
       year: form.year.value,
       // @ts-ignore
-      price: parseInt(form.price.value),
+      price: parseInt(form.carprice.value),
       // @ts-ignore
-      description: form.description.value,
+      description: form.cardescription.value,
       // @ts-ignore
-      img: form.img.value
+      img: form.carimg.value
     }
     carsService.createCar(rawCar)
     _drawCars();
