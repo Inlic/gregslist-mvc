@@ -19,7 +19,7 @@ export default class Job {
       <div class="card">
           <img class="card-img-top" src="${this.img}" alt="">
           <div class="card-body">
-              <h4 class="card-title">${this.company} - ${this.position} - ${this.salary}</h4>
+              <h4 class="card-title">${this.company} - ${this.position} - Salary: ${this.salary}</h4>
               <p class="card-text">${this.description}</p>
               <div class="d-flex justify-content-between">
                   <button class="btn btn-outline-danger" onclick="app.jobsController.removeJob('${this.id}')">Delete</button>
