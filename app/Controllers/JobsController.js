@@ -1,11 +1,12 @@
 import jobsService from "../Services/JobsService.js";
 import STORE from "../store.js";
+import Job from "../Models/Job.js";
 console.log(3)
 // private
 function _drawJobs() {
   console.log(6)
   let jobs = STORE.State.jobs
-  let template = ''
+  let template = new Job({position: "", salary:"",posted: "", company: "",img:"",description: ""}).formTemplate
   // NOTE when you have a collection of items, they will need to be added to the template in a loop
   jobs.forEach(j => template += j.Template)
   document.getElementById('jobs').innerHTML = template

@@ -1,11 +1,13 @@
 import carsService from "../Services/CarsService.js";
 import STORE from "../store.js";
+import Car from "../Models/Car.js";
 console.log(3)
 // private
 function _drawCars() {
   console.log(6)
   let cars = STORE.State.cars
-  let template = ''
+  //instantiate a new dummy car to grab the form template from our getter and add it to the top before the loop
+  let template = new Car({ make: "", model: "", year: 1, price: 1, img: "", description: "" }).formTemplate
   // NOTE when you have a collection of items, they will need to be added to the template in a loop
   cars.forEach(c => template += c.Template)
   document.getElementById('cars').innerHTML = template

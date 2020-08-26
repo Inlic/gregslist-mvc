@@ -30,4 +30,40 @@ export default class House {
       </div>
     </div>`
   }
+  get formTemplate(){
+    return `<div class="row my-3">
+    <div class="col">
+        <form onsubmit="app.housesController.createHouse()" class="form-inline">
+            <div class="form-group p-1">
+                <label class="mr-1" for="beds">Beds</label>
+                <input type="text" name="beds" id="beds" class="form-control" placeholder="Beds">
+            </div>
+            <div class="form-group p-1">
+                <label class="mr-1" for="baths">Baths</label>
+                <input type="text" name="baths" id="baths" class="form-control" placeholder="Baths">
+            </div>
+            <div class="form-group p-1">
+                <label class="mr-1" for="yearbuilt">Year</label>
+                <input type="number" name="yearbuilt" id="yearbuilt" class="form-control" placeholder="Year built" min="1900"
+                    max="2021">
+            </div>
+            <div class="form-group p-1">
+                <label class="mr-1" for="houseprice">Price</label>
+                <input type="number" name="houseprice" id="houseprice" class="form-control" placeholder="Price...">
+            </div>
+            <div class="form-group p-1">
+                <label class="mr-1" for="housedescription">Description</label>
+                <input type="text" name="housedescription" id="housedescription" class="form-control"
+                    placeholder="Description...">
+            </div>
+            <div class="form-group p-1">
+                <label class="mr-1" for="houseimg">Image Url</label>
+                <input type="url" name="houseimg" id="houseimg" class="form-control" placeholder="Image Url...">
+            </div>
+            <button type="submit" class="btn btn-outline-success">Add House</button>
+        </form>
+    </div>
+</div>
+    `
+  }
 }
